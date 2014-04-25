@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04FA3C28-160E-4472-B4E8-DA6F956E379D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ApparatusDBMS.My.MyApplication</StartupObject>
+    <RootNamespace>ApparatusDBMS</RootNamespace>
+    <AssemblyName>ApparatusDBMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ApparatusDBMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ApparatusDBMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APPARATUS\frmAddApparatus.Designer.vb">
+      <DependentUpon>frmAddApparatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APPARATUS\frmAddApparatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APPARATUS\frmApparatus.Designer.vb">
+      <DependentUpon>frmApparatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APPARATUS\frmApparatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APPARATUS\frmEditApparatus.Designer.vb">
+      <DependentUpon>frmEditApparatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APPARATUS\frmEditApparatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APPARATUS\mdlApparatus.vb" />
+    <Compile Include="BORROWER\frmAddBorrower.Designer.vb">
+      <DependentUpon>frmAddBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROWER\frmAddBorrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROWER\frmBorrower.Designer.vb">
+      <DependentUpon>frmBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROWER\frmBorrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROWER\frmEditBorrower.Designer.vb">
+      <DependentUpon>frmEditBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROWER\frmEditBorrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROWER\mdlBorrower.vb" />
+    <Compile Include="BORROW\frmAddBorrow.Designer.vb">
+      <DependentUpon>frmAddBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmAddBorrow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROW\frmBorrow.Designer.vb">
+      <DependentUpon>frmBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmBorrow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROW\frmAddItems.Designer.vb">
+      <DependentUpon>frmAddItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmAddItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROW\frmSelectBorrower.Designer.vb">
+      <DependentUpon>frmSelectBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmSelectBorrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROW\frmViewBorrowed.Designer.vb">
+      <DependentUpon>frmViewBorrowed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmViewBorrowed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BORROW\mdlBorrow.vb" />
+    <Compile Include="BORROW\frmReturnBorrowed.Designer.vb">
+      <DependentUpon>frmReturnBorrowed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BORROW\frmReturnBorrowed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRAND\frmAddBrand.Designer.vb">
+      <DependentUpon>frmAddBrand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BRAND\frmAddBrand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRAND\frmBrand.Designer.vb">
+      <DependentUpon>frmBrand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BRAND\frmBrand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRAND\frmEditBrand.Designer.vb">
+      <DependentUpon>frmEditBrand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BRAND\frmEditBrand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BRAND\mdlBrand.vb" />
+    <Compile Include="CATEGORIES\frmAddCategory.Designer.vb">
+      <DependentUpon>frmAddCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIES\frmAddCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATEGORIES\frmCategories.Designer.vb">
+      <DependentUpon>frmCategories.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIES\frmCategories.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATEGORIES\frmEditCategory.Designer.vb">
+      <DependentUpon>frmEditCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CATEGORIES\frmEditCategory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CATEGORIES\mdlCategory.vb" />
+    <Compile Include="DELIVERY\frmAddDelivery.Designer.vb">
+      <DependentUpon>frmAddDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DELIVERY\frmAddDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DELIVERY\frmDelivery.Designer.vb">
+      <DependentUpon>frmDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DELIVERY\frmDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DELIVERY\frmSelectApparatus.Designer.vb">
+      <DependentUpon>frmSelectApparatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DELIVERY\frmSelectApparatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DELIVERY\frmViewDelivery.Designer.vb">
+      <DependentUpon>frmViewDelivery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DELIVERY\frmViewDelivery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DELIVERY\mdlDelivery.vb" />
+    <Compile Include="DEPARTMENT\frmAddDepartment.Designer.vb">
+      <DependentUpon>frmAddDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT\frmAddDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPARTMENT\frmDepartment.Designer.vb">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT\frmDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPARTMENT\frmEditDepartment.Designer.vb">
+      <DependentUpon>frmEditDepartment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEPARTMENT\frmEditDepartment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEPARTMENT\mdlDepartment.vb" />
+    <Compile Include="INVENTORY\frmInventory.Designer.vb">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY\frmInventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTORY\frmViewAvailableApparatus.Designer.vb">
+      <DependentUpon>frmViewAvailableApparatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTORY\frmViewAvailableApparatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTORY\mdlInventory.vb" />
+    <Compile Include="MODULES\mdlConnection.vb" />
+    <Compile Include="MODULES\mdlKeypress.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="reschanger.vb" />
+    <Compile Include="SUPPLIER\frmAddSupplier.Designer.vb">
+      <DependentUpon>frmAddSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\frmAddSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\frmEditSupplier.Designer.vb">
+      <DependentUpon>frmEditSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\frmEditSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SUPPLIER\frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SUPPLIER\mdlSupplier.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APPARATUS\frmAddApparatus.resx">
+      <DependentUpon>frmAddApparatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APPARATUS\frmApparatus.resx">
+      <DependentUpon>frmApparatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APPARATUS\frmEditApparatus.resx">
+      <DependentUpon>frmEditApparatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROWER\frmAddBorrower.resx">
+      <DependentUpon>frmAddBorrower.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROWER\frmBorrower.resx">
+      <DependentUpon>frmBorrower.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROWER\frmEditBorrower.resx">
+      <DependentUpon>frmEditBorrower.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmAddBorrow.resx">
+      <DependentUpon>frmAddBorrow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmBorrow.resx">
+      <DependentUpon>frmBorrow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmAddItems.resx">
+      <DependentUpon>frmAddItems.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmSelectBorrower.resx">
+      <DependentUpon>frmSelectBorrower.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmViewBorrowed.resx">
+      <DependentUpon>frmViewBorrowed.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BORROW\frmReturnBorrowed.resx">
+      <DependentUpon>frmReturnBorrowed.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BRAND\frmAddBrand.resx">
+      <DependentUpon>frmAddBrand.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BRAND\frmBrand.resx">
+      <DependentUpon>frmBrand.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BRAND\frmEditBrand.resx">
+      <DependentUpon>frmEditBrand.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATEGORIES\frmAddCategory.resx">
+      <DependentUpon>frmAddCategory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATEGORIES\frmCategories.resx">
+      <DependentUpon>frmCategories.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CATEGORIES\frmEditCategory.resx">
+      <DependentUpon>frmEditCategory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DELIVERY\frmAddDelivery.resx">
+      <DependentUpon>frmAddDelivery.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DELIVERY\frmDelivery.resx">
+      <DependentUpon>frmDelivery.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DELIVERY\frmSelectApparatus.resx">
+      <DependentUpon>frmSelectApparatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DELIVERY\frmViewDelivery.resx">
+      <DependentUpon>frmViewDelivery.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPARTMENT\frmAddDepartment.resx">
+      <DependentUpon>frmAddDepartment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPARTMENT\frmDepartment.resx">
+      <DependentUpon>frmDepartment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEPARTMENT\frmEditDepartment.resx">
+      <DependentUpon>frmEditDepartment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTORY\frmInventory.resx">
+      <DependentUpon>frmInventory.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTORY\frmViewAvailableApparatus.resx">
+      <DependentUpon>frmViewAvailableApparatus.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUPPLIER\frmAddSupplier.resx">
+      <DependentUpon>frmAddSupplier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUPPLIER\frmEditSupplier.resx">
+      <DependentUpon>frmEditSupplier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SUPPLIER\frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UNC_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appartus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appartus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appartus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phylogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User-Coat-Red-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laboratory-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dock-Trash-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brand-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inventory-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lab-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button-Close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keys-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appartus3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-find-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actions-edit-find-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phylogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lorry-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\administrator-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action-lock-pink-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock-icon %282%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
